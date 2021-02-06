@@ -1,0 +1,22 @@
+C:\Users\admin\source\repos\Minecraft 开服器\bin\Debug\Minecraft 开服器.exe.config
+C:\Users\admin\source\repos\Minecraft 开服器\bin\Debug\Minecraft 开服器.exe
+C:\Users\admin\source\repos\Minecraft 开服器\bin\Debug\Minecraft 开服器.pdb
+C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Properties.Resources.resources
+C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.exe
+C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.pdb
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\bin\Debug\Minecraft 开服器.exe.config
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\bin\Debug\Minecraft 开服器.exe
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\bin\Debug\Minecraft 开服器.pdb
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.csprojAssemblyReference.cache
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Download.resources
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Properties.Resources.resources
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.csproj.GenerateResource.cache
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.csproj.CoreCompileInputs.cache
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.exe
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.pdb
+C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Windows_Download.resources
+C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Windows_Home.resources
+C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Windows_Info.resources
+C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Windows_Mss.resources
