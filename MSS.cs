@@ -13,10 +13,88 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Text.RegularExpressions;
 
+
 namespace Minecraft_开服器
 {
-    public partial class Download : Form
+    public partial class Windows_Mss : Form
     {
+        public Windows_Mss()
+        {
+            Control.CheckForIllegalCrossThreadCalls = false;
+            InitializeComponent();
+        }
+        public static string BoxState;
+        //
+        //
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            Box.Controls.Add(childForm);
+            Box.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        private void ShowSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+        private void Button_Home_Click(object sender, EventArgs e)
+        {
+            if (BoxState == "Home")
+            {
+
+            }
+            else
+            {
+                openChildForm(new Windows_Home());
+                BoxState = "Home";
+            }
+        }
+        private void Button_Download_Click(object sender, EventArgs e)
+        {
+            if (BoxState == "Download")
+            {
+
+            }
+            else
+            {
+                openChildForm(new Windows_Download());
+                BoxState = "Download";
+            }
+        }
+        private void Button_Info_Click(object sender, EventArgs e)
+        {
+            if (BoxState == "Info")
+            {
+
+            }
+            else
+            {
+                openChildForm(new Windows_Info());
+                BoxState = "Info";
+            }
+        }
+        //窗口控件
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Mini_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        //窗口控件
         public class Win32
         {
             public const Int32 AW_HOR_POSITIVE = 0x00000001; // 从左到右打开窗口
@@ -69,145 +147,6 @@ namespace Minecraft_开服器
                 createParams.ClassStyle |= CS_DropSHADOW;
                 return createParams;
             }
-        }
-        public Download()
-        {
-            Control.CheckForIllegalCrossThreadCalls = false;
-            InitializeComponent();
-        }
-        private void Download_Button_Click(object sender, EventArgs e)
-        {
-            string ServerPath1 = "";
-            string Desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            if (Server_Ver.Text == "")
-            {
-                logs.Text = "请输入服务端版本";
-            }
-            else
-            {
-                R_Server_Path1.Description = "请选择保存到的目录";
-                if (R_Server_Path1.ShowDialog() == DialogResult.OK)
-                {
-                    //记录选中的目录  
-                    ServerPath1 = R_Server_Path1.SelectedPath;
-                    Thread DownloadFiles = new Thread(new ThreadStart(Download));
-                    DownloadFiles.Start();
-                }
-                else
-                {
-                    logs.Text = "请选择保存目录!";
-                    return;
-                }
-            }
-            void Download()
-            {
-                logs.Text = "下载时可能会出现卡顿，但都是正常现象，用时可能会较长";
-                string url = "https://download.mcbbs.net/version/" + Server_Ver.Text + "/server";
-                DateTime start = DateTime.Now;
-                Uri uri = new Uri(url); 
-                ServerPath1 = ServerPath1 + "\\" + Server_Ver.Text + "_Server.jar";
-                //指定url 下载文件
-                WebClient client = new WebClient();
-                client.DownloadFile(url, ServerPath1);
-                logs.Text = "下载成功,用时：" + (DateTime.Now - start).TotalSeconds + "秒,文件目录：" + ServerPath1;
-            }
-
-        }
-        //窗口控件
-        private void Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Mini_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-        //窗口控件
-
-        private void Start_Click(object sender, EventArgs e)
-        {
-            string ServerNP = "";
-
-            string ServerName = Server_Name.Text;
-            if (Server_Name.Text == "" || Max_v.Text == "" || GUI_yn.Text == "")
-            {
-                logs.Text = "有必填选项为空，请检查之后再重试！";
-                return;
-            }
-            R_Server_Path1.Description = "请选择服务器目录";
-            if (R_Server_Path1.ShowDialog() == DialogResult.OK)
-            {
-                //记录选中的目录  
-                string ServerPath2 = R_Server_Path1.SelectedPath;
-                T_ServerPath2.Text = ServerPath2;
-                logs.Text = ServerPath2;
-            }
-            else
-            {
-                logs.Text = "请选择保存目录!";
-                return;
-            }
-            O_Server_Path1.Title = "请选择服务端目录";
-            O_Server_Path1.Filter = "Jar文件(*.jar)|*.jar";
-            if (O_Server_Path1.ShowDialog() == DialogResult.OK)
-            {
-                ServerNP = O_Server_Path1.FileName;
-                T_ServerNP.Text = ServerNP;
-            }
-            else
-            {
-                logs.Text = "请选择文件目录!";
-                return;
-            }
-            Thread CreateCmd = new Thread(new ThreadStart(Create));
-            CreateCmd.Start();
-        }
-        private void Create()
-        {
-            string Gui_yn;
-            String Path1 = logs.Text + "\\Start.bat";
-            //创建StreamWriter 类的实例
-            StreamWriter Writer1 = new StreamWriter(Path1);
-            Writer1.WriteLine("@echo off");
-            if(GUI_yn.Text == "Yes")
-            {
-                Gui_yn = "";
-            }
-            else
-            {
-                Gui_yn = "nogui";
-            }
-            Writer1.WriteLine("java -Xmx" + Max_v.Text + " -jar " + Server_Name.Text + " " + Gui_yn);
-            Writer1.WriteLine("pause");
-            //刷新缓存
-            Writer1.Flush();
-            //关闭流
-            Writer1.Close();
-            String Path2 = logs.Text + "\\eula.txt";
-            //创建StreamWriter 类的实例
-            StreamWriter Writer2 = new StreamWriter(Path2);
-            Writer2.WriteLine("#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).");
-            Writer2.WriteLine("#Sat Jan 01 01:00:00 CST 2021");
-            Writer2.WriteLine("eula=ture");
-            //刷新缓存
-            Writer2.Flush();
-            //关闭流
-            Writer2.Close();
-            if (File.Exists(T_ServerPath2.Text + "\\" + Server_Name.Text))
-            {
-
-            }
-            else
-            {
-                File.Move(T_ServerNP.Text, T_ServerPath2.Text);
-
-            }
-        }
-
-        private void Server_Ver_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Server_Name.Text = Server_Ver.Text + "_Server.jar";
         }
     }
 }

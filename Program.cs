@@ -16,7 +16,7 @@ namespace Minecraft_开服器
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Download());
+            Application.Run(new Windows_Mss());
         }
     }
 }
