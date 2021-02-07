@@ -10,7 +10,6 @@ C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\bin\Debug\Minecraft 开�
 C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\bin\Debug\Minecraft 开服器.exe
 C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\bin\Debug\Minecraft 开服器.pdb
 C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.csprojAssemblyReference.cache
-C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Download.resources
 C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Properties.Resources.resources
 C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.csproj.GenerateResource.cache
 C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft 开服器.csproj.CoreCompileInputs.cache
@@ -20,3 +19,9 @@ C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Wi
 C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Windows_Home.resources
 C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Windows_Info.resources
 C:\Users\admin\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Windows_Mss.resources
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Wds_Download.resources
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Wds_Home.resources
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Wds_Info.resources
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Wds_Settings.resources
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Wds_MessageBox.resources
+C:\Users\Miaomiaoywww\source\repos\Minecraft 开服器\obj\Debug\Minecraft_开服器.Wds_Mss.resources
