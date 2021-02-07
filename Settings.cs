@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Minecraft_开服器
 {
-    public partial class Wds_Info : Form
+    public partial class Wds_Settings : Form
     {
-        public Wds_Info()
+        public Wds_Settings()
         {
             InitializeComponent();
         }

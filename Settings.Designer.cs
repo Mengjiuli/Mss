@@ -1,7 +1,7 @@
 ﻿
 namespace Minecraft_开服器
 {
-    partial class Wds_Info
+    partial class Wds_Settings
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,14 @@ namespace Minecraft_开服器
         {
             this.SuspendLayout();
             // 
-            // Wds_Info
+            // Wds_Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 500);
-            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Wds_Info";
-            this.Text = "Info";
+            this.Name = "Wds_Settings";
+            this.Text = "Settings";
             this.ResumeLayout(false);
 
         }
